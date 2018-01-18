@@ -18,22 +18,7 @@ interface Passenger {
   styleUrls: ['app.component.scss'],
   template: `
     <div class="app">
-      <h3>Airline Passengers</h3>
-      <ul>
-        <li *ngFor="let passenger of passengers; let i = index;">
-          <span 
-            class="status"
-            [class.checked-in]="passenger.checkedIn"></span>
-          {{ i }}: {{ passenger.fullname }}
-          <div class="date">
-            Check in date: 
-              {{ passenger.checkedInDate ? (passenger.checkedInDate | date: 'yMMMMd') : 'Not checked in' }}
-          </div>
-          <div class="children">
-            Children: {{ passenger.children?.length || 'N/A' }}
-          </div>
-        </li>
-      </ul>
+      <passenger-dashboard></passenger-dashboard>
     </div>
   `
 })
